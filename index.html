@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <title>My Website</title>
+    <link rel="styheet" href="sty.css">
+</head>
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <title>My Website</title>
+    <style>
+    body{
+    text-align:center;
+    font-family: Arial, sans-serif;
+    }
+
+    header{
+            background-color:#4CAF50;
+            color:white;
+            padding:20px;
+          }
+    .profile, .List{
+            width:60%;
+            margin:20px auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+            }
+    h2{
+            background-color:#87CEFA;
+            padding:10px;
+            border-radius:5px;
+      }
+
+    button{
+            padding:8px 15px;
+            margin-top:10px;
+          }
+   </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Website</h1>
+        <p>แนะนำตัวฉัน</p>
+    </header>
+    
+    <input type="text" id="username" placeholder="กรอกชื่อของคุณ">
+    <button onclick="showMessage()">แสดงผล</button>
+    <p id="result"></p>
+    <script>
+        function showMessage() {
+        let name = document.getElementById("username").value;
+        if(name === "") {
+          document.getElementById("result").innerHTML = "กรุณากรอกชื่อก่อนดำเนินการ";
+          result.style.color = "red";
+        } else {
+          document.getElementById("result").innerHTML = "ยินดีต้อนรับคุณ " + name + " เข้าสู่เว็บไซต์ของเรา!";
+          result.style.color = "green";
+        }
+    }
+    </script>
+  
+    <section class="profile">
+        <img src="https://media.tenor.com/4EhUju6UJtEAAAAi/grrr-rawr.gif" alt="OneCompiler 104" width="100">
+        <h2>ชื่อ นางสาวพิชญา พรมรัง</h2>
+        <p>ปัจจุบันกำลังศึกษาอยู่ที่มหาวิทยาลัยราชภัฏนครราชสีมา สาขาเทคโนโลยีดิจิทัลมีเดีย</p>
+        <p>ช่องทางติดต่อ <a href="https://www.facebook.com/phichya.791803?locale=th_TH">facebook</a></p>
+    </section>
+
+    <section class="List">
+        <h2>งานอดิเรก</h2>
+        <ul>
+            <li>ตัดต่อคลิป</li>
+            <li>อ่านการ์ตูน</li>
+            <li>เล่นกีต้าร์</li>
+        </ul>
+    </section>
+    
+    <button onclick="displayMessage()">กรุณาคลิกปุ่มที่นี่!</button>
+    <p id="demo"></p>
+    
+    <script>
+      function displayMessage() {
+        document.getElementById("demo").innerHTML = "ขอบคุณที่เข้ามาชมเว็บไซต์ของเรานะคะ ";
+        demo.style.color = "#228B22";
+        }
+    </script>
+
+
+</body>
+</html>
